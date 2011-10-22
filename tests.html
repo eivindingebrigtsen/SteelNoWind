@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testing ground</title>
+    <link rel="stylesheet" href="css/jasmine.css" type="text/css" media="screen" title="no title" charset="utf-8">    
+    <script src="js/libs/jasmine.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/libs/jasmine-html.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/libs/jquery-1.6.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/libs/underscore.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/libs/handlebars.1.0.0.beta.3.js" type="text/javascript" charset="utf-8"></script>    
+    <script src="js/src/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="spec/app.spec.js" type="text/javascript" charset="utf-8"></script>
+    
+  </head>
+  <body>
+    	<script type="text/javascript">	
+		var executeJasmineSpecs = function(){
+			window.reporter = new jasmine.TrivialReporter(); jasmine.getEnv().addReporter(reporter);
+			jasmine.getEnv().execute();
+		};
+	
+		if (window.addEventListener) {
+			addEventListener('DOMContentLoaded', executeJasmineSpecs, false);
+		} else {
+			attachEvent('onload', executeJasmineSpecs);
+		}		
+	</script>
+  </body>
+</html>
